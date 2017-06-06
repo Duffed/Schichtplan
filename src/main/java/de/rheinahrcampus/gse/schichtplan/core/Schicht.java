@@ -28,4 +28,5 @@ public class Schicht {
 	public Iterable<Mitarbeiter> getMitarbeiter(){
 		return mitarbeiter;
 	}
+
 }

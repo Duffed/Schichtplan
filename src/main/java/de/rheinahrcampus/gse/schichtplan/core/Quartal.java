@@ -11,7 +11,7 @@ public class Quartal {
 	
 	private static final Map<Quartalszahl, Month> START_DATUM;
 	private static final Map<Quartalszahl, Month> END_DATUM;
-	private List<LocalDate> tageImQuartal;
+	private List<LocalDate> tageImQuartal = new ArrayList<>();
 	
 	//Map wird gefüllt
 	static {
@@ -27,8 +27,6 @@ public class Quartal {
 	}
 	
 	public Quartal(int jahr, Quartalszahl quartalszahl) {
-		tageImQuartal = new ArrayList<>();
-		
 		//Wir holen uns den numerischen Wert des START_ und END_DATUM
 		int startMonat = START_DATUM.get(quartalszahl).getValue();
 		int endMonat = END_DATUM.get(quartalszahl).getValue();
