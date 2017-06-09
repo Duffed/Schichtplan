@@ -13,7 +13,11 @@ public class Mitarbeiter {
 		this.nachname = nachname;
 		this.beruf = beruf;
 		this.passwort = passwort;
-		this.benutzername = vorname.toLowerCase().substring(0, 1) + nachname.toLowerCase().substring(0, 6);
+		if (nachname.length() > 5) {
+			this.benutzername = vorname.toLowerCase().substring(0, 1) + nachname.toLowerCase().substring(0, 6);
+		} else {
+			this.benutzername = vorname.toLowerCase().substring(0, 1) + nachname.toLowerCase();
+		}
 	}
 
 	public String getBenutzername() {

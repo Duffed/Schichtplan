@@ -1,6 +1,6 @@
 package de.rheinahrcampus.gse.schichtplan.core;
 
-public enum Stationsnamen {
+public enum Stationsname {
 	KARDIOLOGIE,
 	ONKOLOGIE,
 	GASTROENTEROLOGIE,

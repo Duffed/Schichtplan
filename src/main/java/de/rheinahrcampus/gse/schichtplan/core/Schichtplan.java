@@ -41,8 +41,6 @@ public class Schichtplan {
 		Mitarbeiter ma = new Mitarbeiter("Joscha", "Diederichs", Beruf.STATIONSLEITUNG, "123");
 		ShiftPlanCreator spc = new ShiftPlanCreator(ma);
 		
-		Station station = new Station();
-		
 		System.out.println("Hallo!");
 		
 		Quartal eins2017 = new Quartal(2016,Quartalszahl.EINS); //Schaltjahr
@@ -51,12 +49,17 @@ public class Schichtplan {
 			System.out.println(tag);
 		}
 		
-		System.out.println("Tschüss");
+		System.out.println("Tschï¿½ss");
 		System.out.println(Beruf.EXAMINIERTE_PFLEGEKRAFT.getName());
 		
-		spc.erstelleSchichtplan(station, 2017, Quartalszahl.EINS);
-		spc.erstelleSchichtplan(station, 69, Quartalszahl.ZWEI);
-		for (Schichtplan sp : spc.getSchichtplaene(station)) {
+		try {
+			spc.erstelleSchichtplan(Station.getChirugie(), 2017, Quartalszahl.EINS);
+			spc.erstelleSchichtplan(Station.getChirugie(), 69, Quartalszahl.ZWEI);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Schichtplan sp : spc.getSchichtplaene(Station.getChirugie())) {
 			System.out.println(sp.getJahr());
 		}
 		System.out.println(ma.getBenutzername());
