@@ -45,7 +45,9 @@ public class Mitarbeiter {
 			this.benutzername = vorname.toLowerCase().substring(0, 1) + nachname.toLowerCase().substring(0, 6);
 		} else {
 			this.benutzername = vorname.toLowerCase().substring(0, 1) + nachname.toLowerCase();
-		}		
+		}
+		
+		setStandardBerechtigungen();
 	}
 	
 	private void setStandardBerechtigungen(){
