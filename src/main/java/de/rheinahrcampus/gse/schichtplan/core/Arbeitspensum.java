@@ -1,3 +1,5 @@
+package de.rheinahrcampus.gse.schichtplan.core;
+
 
 public enum Arbeitspensum {
 	

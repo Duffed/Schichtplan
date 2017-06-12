@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Map;
 
 public class ShiftPlanCreator {
-	 private Mitarbeiter angemeldeterMitarbeiter;
+	 private Mitarbeiter_old angemeldeterMitarbeiter;
 	 private List<Schichtplan> schichtplaeneListe = new LinkedList<>();
 	 private Map<Station, List<Schichtplan>> schichtplaene = new HashMap<>();
 	
-	 public ShiftPlanCreator(Mitarbeiter mitarbeiter) {
+	 public ShiftPlanCreator(Mitarbeiter_old mitarbeiter) {
 		 this.angemeldeterMitarbeiter = mitarbeiter;
 	 }
 	 
-	 public Mitarbeiter getAngemeldetenMitarbeiter(){
+	 public Mitarbeiter_old getAngemeldetenMitarbeiter(){
 		return angemeldeterMitarbeiter;
 	}
 	 

@@ -8,7 +8,7 @@ public class SpcSollte {
 
 	@Test
 	public void denAngemeldetenBenutzerZurueckgebenKoennen() {
-		Mitarbeiter ma = new Mitarbeiter("Vor", "Nach", Beruf.EXAMINIERTE_PFLEGEKRAFT,"123");
+		Mitarbeiter_old ma = new Mitarbeiter_old("Vor", "Nach", Beruf.EXAMINIERTE_PFLEGEKRAFT,"123");
 		ShiftPlanCreator spc = new ShiftPlanCreator(ma);
 		
 		assertEquals(spc.getAngemeldetenMitarbeiter(),ma);
@@ -16,7 +16,7 @@ public class SpcSollte {
 	
 	@Test
 	public void einenSchichtplanErstellenKoennen(){
-		Mitarbeiter ma = new Mitarbeiter("Vor", "Nach", Beruf.EXAMINIERTE_PFLEGEKRAFT,"123");
+		Mitarbeiter_old ma = new Mitarbeiter_old("Vor", "Nach", Beruf.STATIONSLEITUNG,"123");
 		ShiftPlanCreator spc = new ShiftPlanCreator(ma);
 		
 		assertNull(spc.getSchichtplaene(Station.getChirugie()));

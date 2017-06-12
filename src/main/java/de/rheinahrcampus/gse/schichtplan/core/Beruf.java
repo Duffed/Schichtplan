@@ -32,4 +32,13 @@ public enum Beruf {
 	public boolean hatBerechtigung(Berechtigung berechtigung) {
 		return berechtigungen.contains(berechtigung);
 	}
+	
+	public static Beruf ausKuerzel(String kuerzel) {
+		for(Beruf b : Beruf.values()) {
+			if(b.kuerzel.equals(kuerzel)) {
+				return b;
+			}
+		}
+		return null;
+	}
 }

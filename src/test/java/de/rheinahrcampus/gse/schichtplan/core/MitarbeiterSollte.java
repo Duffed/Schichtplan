@@ -8,7 +8,7 @@ public class MitarbeiterSollte {
 
 	@Test
 	public void AlsStationsleiterEinenSchichtplanErstellenMuessen() {
-		Mitarbeiter SL = new Mitarbeiter("SLVorname", "Nachname", Beruf.STATIONSLEITUNG,"123");	
+		Mitarbeiter_old SL = new Mitarbeiter_old("SLVorname", "Nachname", Beruf.STATIONSLEITUNG,"123");	
 		assertTrue(SL.hatBerechtigung(Berechtigung.SCHICHTPLAN_ERSTELLEN));
 	}
 	

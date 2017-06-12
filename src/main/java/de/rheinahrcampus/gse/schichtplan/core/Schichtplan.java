@@ -38,7 +38,7 @@ public class Schichtplan {
 	
 	
 	public static void main(String[] args) {
-		Mitarbeiter ma = new Mitarbeiter("Joscha", "Diederichs", Beruf.STATIONSLEITUNG, "123");
+		Mitarbeiter_old ma = new Mitarbeiter_old("Joscha", "Diederichs", Beruf.STATIONSLEITUNG, "123");
 		ShiftPlanCreator spc = new ShiftPlanCreator(ma);
 		
 		System.out.println("Hallo!");

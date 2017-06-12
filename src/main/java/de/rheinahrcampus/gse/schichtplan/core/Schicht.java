@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 public class Schicht {
-	private List<Mitarbeiter> mitarbeiter = new ArrayList<>();
+	private List<Mitarbeiter_old> mitarbeiter = new ArrayList<>();
 	private Schichtart schichtart;
-	private Map<Mitarbeiter, String> kommentare = new HashMap<>();
+	private Map<Mitarbeiter_old, String> kommentare = new HashMap<>();
 	private Schichtplan schichtplan;
 	private LocalDate datum;
 	
@@ -19,21 +19,21 @@ public class Schicht {
 		this.datum = datum;
 	}
 	
-	public void fuegeKommentarHinzu(Mitarbeiter mitarbeiter, String kommentar){
+	public void fuegeKommentarHinzu(Mitarbeiter_old mitarbeiter, String kommentar){
 		kommentare.put(mitarbeiter, kommentar);
 	}
 	
-	public String getKommentar(Mitarbeiter ma){
+	public String getKommentar(Mitarbeiter_old ma){
 		String kommentar = "";
 		if (kommentare.get(ma) == null) return kommentar;
 		return kommentare.get(ma);
 	}
 	
-	public void fuegeMitarbeiterHinzu(Mitarbeiter mitarbeiter){ //Object?
+	public void fuegeMitarbeiterHinzu(Mitarbeiter_old mitarbeiter){ //Object?
 		this.mitarbeiter.add(mitarbeiter);
 	}
 	
-	public List<Mitarbeiter> getMitarbeiter(){
+	public List<Mitarbeiter_old> getMitarbeiter(){
 		return mitarbeiter;
 	}
 

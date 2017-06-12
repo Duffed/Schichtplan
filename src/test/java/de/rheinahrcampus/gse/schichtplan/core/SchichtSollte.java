@@ -12,7 +12,7 @@ public class SchichtSollte {
 	public void EinenKommentarEnthaltenKoennen() {
 		Schichtplan sp1 = new Schichtplan(2017, Quartalszahl.DREI);
 		Schicht schicht1 = new Schicht(sp1, LocalDate.of(2017, 1, 1),Schichtart.FRUEH);
-		Mitarbeiter mitarbeiter1 = new Mitarbeiter("Hans","Nachname", Beruf.PFLEGEHELFER,"123");
+		Mitarbeiter_old mitarbeiter1 = new Mitarbeiter_old("Hans","Nachname", Beruf.PFLEGEHELFER,"123");
 		schicht1.fuegeMitarbeiterHinzu(mitarbeiter1);
 		
 		assertEquals("", schicht1.getKommentar(mitarbeiter1));
@@ -24,7 +24,7 @@ public class SchichtSollte {
 	public void MitarbeiterZugewiesenBekommen(){
 		Schichtplan sp1 = new Schichtplan(2017, Quartalszahl.DREI);
 		Schicht schicht1 = new Schicht(sp1, LocalDate.of(2017, 1, 1),Schichtart.FRUEH);
-		Mitarbeiter mitarbeiter1 = new Mitarbeiter("Hans","Nachname", Beruf.PFLEGEHELFER,"123");
+		Mitarbeiter_old mitarbeiter1 = new Mitarbeiter_old("Hans","Nachname", Beruf.PFLEGEHELFER,"123");
 		
 		assertEquals(0, schicht1.getMitarbeiter().size());
 		schicht1.fuegeMitarbeiterHinzu(mitarbeiter1);
